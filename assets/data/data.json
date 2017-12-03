@@ -5704,10 +5704,5 @@
 	"min": 265000000,
 	"max": 275000000,
 	"text": "FIJO?FIJO POR SATeLITE Tierra-espacio? MoVIL?RADIOASTRONOMiA"
-},
-{
-	"min": 275000000,
-	"max": 3000000000,
-	"text": "No atribuida"
 }
 ]
