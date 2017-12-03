@@ -1,0 +1,4 @@
+/*! Built with http://stenciljs.com */
+
+App.loadStyles("ion-note_md",".note-md{color:#c5c5c5}.note-md-primary{color:#488aff}.note-md-secondary{color:#32db64}.note-md-danger{color:#f53d3d}.note-md-light{color:#f4f4f4}.note-md-dark{color:#222}\nion-note.hydrated{visibility:inherit}");
+App.loadComponents("jg6jpf20",function(e,o,t,r){"use strict";var n=function(e,o,t,r){var n,c=arguments.length,l=c<3?o:null===r?r=Object.getOwnPropertyDescriptor(o,t):r;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)l=Reflect.decorate(e,o,t,r);else for(var p=e.length-1;p>=0;p--)(n=e[p])&&(l=(c<3?n(l):c>3?n(o,t,l):n(o,t))||l);return c>3&&l&&Object.defineProperty(o,t,l),l};class c{render(){return o("slot",null)}}n([],c.prototype,"color",void 0),n([],c.prototype,"mode",void 0),c=n([],c),e["ion-note"]=c},["ion-note",[["color",1,1,2],["mode",1,1,1]],{theme:"note"}]);;

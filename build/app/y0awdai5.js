@@ -1,0 +1,4 @@
+/*! Built with http://stenciljs.com */
+
+App.loadStyles("ion-backdrop","ion-backdrop{left:0;top:0;position:absolute;z-index:2;display:block;width:100%;height:100%;background-color:#000;opacity:.01;transform:translateZ(0);contain:strict}ion-backdrop.backdrop-no-tappable{cursor:auto}\nion-backdrop.hydrated{visibility:inherit}");
+App.loadComponents("y0awdai5",function(e,t,o,c){"use strict";class n{}n=function(e,t,o,c){var n,r=arguments.length,f=r<3?t:null===c?c=Object.getOwnPropertyDescriptor(t,o):c;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)f=Reflect.decorate(e,t,o,c);else for(var l=e.length-1;l>=0;l--)(n=e[l])&&(f=(r<3?n(f):r>3?n(t,o,f):n(t,o))||f);return r>3&&f&&Object.defineProperty(t,o,f),f}([],n),e["ion-backdrop"]=n},["ion-backdrop"]);;

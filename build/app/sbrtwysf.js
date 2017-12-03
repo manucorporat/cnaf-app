@@ -1,0 +1,3 @@
+/*! Built with http://stenciljs.com (es5) */
+
+App.loadComponents("sbrtwysf",function(e,t,o,n){"use strict";var r=function(e,t,o,n){var r,c=arguments.length,i=c<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,o):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)i=Reflect.decorate(e,t,o,n);else for(var l=e.length-1;l>=0;l--)(r=e[l])&&(i=(c<3?r(i):c>3?r(t,o,i):r(t,o))||i);return c>3&&i&&Object.defineProperty(t,o,i),i},c=function(){function e(){}return e.prototype.handleClick=function(e){console.log("Route link click",e)},e.prototype.render=function(){},e}();r([],c.prototype,"url",void 0),r([],c.prototype,"router",void 0),c=r([],c),e["ion-route-link"]=c},["ion-route-link",[["router",1,1,1],["url",1,1,2]]]);;
