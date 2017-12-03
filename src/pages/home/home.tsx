@@ -38,7 +38,7 @@ export class HomePage {
   }
 
   async componentDidLoad() {
-    const response = await fetch('/assets/data/data.json')
+    const response = await fetch('assets/data/data.json')
     this.data = await response.json();
     this.maxValue = Math.log10(this.data[this.data.length - 1].max);
     this.width = this.el.offsetWidth;
