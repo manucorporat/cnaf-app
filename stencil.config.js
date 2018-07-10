@@ -1,11 +1,9 @@
-exports.config = {
-  bundles: [],
-  collections: [
-    { name: '@ionic/core' }
-  ]
-};
 
-exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
-}
+exports.config = {
+  outputTargets: [{
+    type: 'www',
+    inlineLoaderScript: false,
+  }],
+  enableCache: false,
+  globalStyle: 'src/app.css'
+};

@@ -3,7 +3,7 @@ import simpleheat from 'simpleheat';
 
 @Component({
   tag: 'my-heatmap',
-  styleUrl: 'heatmap.scss'
+  styleUrl: 'heatmap.css'
 })
 export class Heapmap {
 
@@ -19,7 +19,7 @@ export class Heapmap {
   @Prop() height = 100;
   @Prop() width = 300;
   @Prop() data: any[];
-  @Prop() title: string;
+  @Prop() label: string;
 
   constructor() {
     const min = Math.log10(this.min);
@@ -51,13 +51,14 @@ export class Heapmap {
   }
 
   protected render() {
-    Context.dom.raf(() => {
+    requestAnimationFrame(() => {
       this.updateHeap();
     });
+
     const size = 2;
     const dom = [];
-    if (this.title && this.title.length > 0) {
-      dom.push(<h3>{this.title}</h3>);
+    if (this.label && this.label.length > 0) {
+      dom.push(<h3>{this.label}</h3>);
     }
     dom.push(
       <div style={{

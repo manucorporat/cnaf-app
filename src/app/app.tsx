@@ -1,4 +1,5 @@
 import { Component, Element } from '@stencil/core';
+import '@ionic/core';
 
 @Component({
   tag: 'my-app',
@@ -29,10 +30,13 @@ export class App {
   }
 
   protected render() {
-    const Nav = 'ion-nav' as any;
-
 
     return [
+      <ion-router useHash={true}>
+        <ion-route-redirect from="/" to="by_name" />
+        <ion-route url="by_name" component="page-home" />
+        <ion-route url="by_freq" component="page-range" />
+      </ion-router>,
       <ion-split-pane when={true}>
         <ion-menu>
           <ion-header>
@@ -42,12 +46,12 @@ export class App {
           </ion-header>
           <ion-content>
             <ion-list>
-              <ion-item onClick={() => this.setByName()}>Buscar por nombre</ion-item>
-              <ion-item onClick={() => this.setByFreq()}>Buscar por banda</ion-item>
+              <ion-item href="by_name">Buscar por nombre</ion-item>
+              <ion-item href="by_freq">Buscar por banda</ion-item>
             </ion-list>
           </ion-content>
         </ion-menu>
-        <Nav root="page-home" main />
+        <ion-router-outlet main/>
       </ion-split-pane>
     ];
   }

@@ -8,7 +8,7 @@ export interface Segment {
 
 @Component({
   tag: 'page-home',
-  styleUrl: 'home.scss'
+  styleUrl: 'home.css'
 })
 export class HomePage {
 
@@ -53,7 +53,7 @@ export class HomePage {
   addHeapMap() {
     const prev = this.getHeapMap();
     if (prev) {
-      prev.title = this.getText();
+      prev.label = this.getText();
     }
     this.maps.push({
       data: this.search(this.getText()),
@@ -85,7 +85,7 @@ export class HomePage {
       this.modalCtrl.create({
         component: 'page-details',
         componentProps: {
-          title: title,
+          label: title,
           data: this.data,
         }
       }).then(m => m.present());
@@ -114,11 +114,11 @@ export class HomePage {
 
 function mapHeatMap(obj: any, title: any, width: any, data: any) {
   return <my-heatmap
-    title={title}
+    label={title}
     width={width}
     data={data}
     onClick={function (ev: any) {
-      const t = ev.target.closest('my-heatmap').title
+      const t = ev.target.closest('my-heatmap').label;
       obj.openDetailPage(t);
     }} />
 }

@@ -9,7 +9,7 @@ export interface Segment {
 
 @Component({
   tag: 'page-range',
-  styleUrl: 'range.scss'
+  styleUrl: 'range.css'
 })
 export class RangePage {
 

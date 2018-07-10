@@ -1,6 +1,6 @@
-import { Component, Element, Listen, State, Prop } from '@stencil/core';
-import { search, generateDataPoint } from '../home/home';
-import { format, unit } from '../my-heatmap/heatmap';
+import { Component, Element, State, Prop } from '@stencil/core';
+import { search } from '../home/home';
+import { format } from '../my-heatmap/heatmap';
 
 export interface Segment {
   min: number,
@@ -10,7 +10,7 @@ export interface Segment {
 
 @Component({
   tag: 'page-details',
-  styleUrl: 'details.scss'
+  styleUrl: 'details.css'
 })
 export class DetailsPage {
 
@@ -19,19 +19,19 @@ export class DetailsPage {
   @State() results: any[];
   @State() width: number;
   @State() heatData: any[];
-  @Prop() title: string;
+  @Prop() label: string;
   @Prop() data: any[];
 
   async componentDidLoad() {
     this.width = this.el.offsetWidth;
-    this.results = search(this.data, this.title);
+    this.results = search(this.data, this.label);
   }
 
   protected render() {
     return [
       <ion-header>
         <ion-toolbar color="dark">
-          <ion-title>{this.title}</ion-title>
+          <ion-title>{this.label}</ion-title>
         </ion-toolbar>
       </ion-header>,
       <ion-content>

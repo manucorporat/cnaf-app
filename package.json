@@ -8,50 +8,21 @@
   ],
   "scripts": {
     "build": "stencil build",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "serve": "stencil-dev-server",
-    "start": "npm run dev",
-    "test": "jest --no-cache",
-    "test.watch": "jest --watch --no-cache",
-    "ionic:build": "npm run build",
-    "ionic:serve": "npm run dev",
+    "start": "stencil build --dev --watch --serve",
     "www": "bs --no-cleanup --directory ./www"
   },
   "dependencies": {
-    "@ionic/core": "0.0.2-27",
-    "@stencil/core": "0.0.8-9",
-    "@stencil/router": "latest",
-    "ionicons": "^4.0.0-6",
+    "@ionic/core": "4.0.0-alpha.9",
+    "@stencil/core": "0.10.2",
     "simpleheat": "^0.4.0"
   },
   "devDependencies": {
-    "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest",
-    "@types/jest": "^21.1.1",
-    "branchsite": "^4.0.2",
-    "jest": "^21.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+    "branchsite": "^4.0.3"
   },
   "author": "Ionic Team",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
-  "jest": {
-    "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json",
-      "jsx"
-    ]
-  }
+  "homepage": "https://github.com/ionic-team/stencil"
 }
