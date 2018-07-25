@@ -1,0 +1,148 @@
+{
+  "namespace": "App",
+  "fsNamespace": "app",
+  "loader": "../app.js",
+  "global": "app.global.js",
+  "core": "app.8cdydrh0.js",
+  "corePolyfilled": "app.ryy7frlf.js",
+  "components": {
+    "ion-animation-controller": {
+      "$": "igjmorue"
+    },
+    "ion-app": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-backdrop": {
+      "ios": "yc7epxoo",
+      "md": "kq7onfw0"
+    },
+    "ion-buttons": {
+      "md": "s8qbmqnd",
+      "ios": "zgrie7yv"
+    },
+    "ion-content": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-gesture": {
+      "$": "bedvsl7m"
+    },
+    "ion-gesture-controller": {
+      "$": "bedvsl7m"
+    },
+    "ion-header": {
+      "ios": "1df1bvlk",
+      "md": "9jt2zhjy"
+    },
+    "ion-icon": {
+      "$": "gghlfaah"
+    },
+    "ion-item": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-label": {
+      "md": "s8qbmqnd",
+      "ios": "zgrie7yv"
+    },
+    "ion-list": {
+      "ios": "1df1bvlk",
+      "md": "9jt2zhjy"
+    },
+    "ion-menu": {
+      "md": "lj1pl18e",
+      "ios": "jkjwp1qj"
+    },
+    "ion-menu-button": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-menu-controller": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-menu-toggle": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-modal": {
+      "ios": "x4a9m0tq",
+      "md": "lsd7j55q"
+    },
+    "ion-modal-controller": {
+      "$": "b93yvllm"
+    },
+    "ion-note": {
+      "md": "lj1pl18e",
+      "ios": "jkjwp1qj"
+    },
+    "ion-range": {
+      "md": "lj1pl18e",
+      "ios": "jkjwp1qj"
+    },
+    "ion-range-knob": {
+      "$": "uj7ppkkf"
+    },
+    "ion-ripple-effect": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-route": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-route-redirect": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-router": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-router-outlet": {
+      "md": "lj1pl18e",
+      "ios": "jkjwp1qj"
+    },
+    "ion-scroll": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-searchbar": {
+      "md": "s8qbmqnd",
+      "ios": "zgrie7yv"
+    },
+    "ion-split-pane": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-tap-click": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "ion-title": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "ion-toolbar": {
+      "md": "2fd3nb55",
+      "ios": "qjyxzidz"
+    },
+    "my-app": {
+      "md": "amhduuke",
+      "ios": "gapwgktf"
+    },
+    "my-heatmap": {
+      "$": "b93yvllm"
+    },
+    "page-details": {
+      "$": "aqwzqavo"
+    },
+    "page-home": {
+      "$": "b93yvllm"
+    },
+    "page-range": {
+      "$": "uj7ppkkf"
+    }
+  }
+}

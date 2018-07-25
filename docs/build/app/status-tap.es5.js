@@ -1,0 +1,2 @@
+/*! Built with http://stenciljs.com */
+App.loadBundle("status-tap.js",["exports"],function(n){window.App.h,n.startStatusTap=function(n,t){t.read(function(){var e=n.innerWidth,o=n.innerWidth,i=n.document.elementFromPoint(e/2,o/2);if(i){var r=i.closest("ion-content");r&&r.componentOnReady().then(function(){t.write(function(){r.getScrollElement().scrollToTop(300)})})}})},Object.defineProperty(n,"__esModule",{value:!0})});
