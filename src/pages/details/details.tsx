@@ -1,12 +1,5 @@
 import { Component, Element, State, Prop } from '@stencil/core';
-import { search } from '../home/home';
-import { format } from '../my-heatmap/heatmap';
-
-export interface Segment {
-  min: number,
-  max: number;
-  text: string;
-}
+import { format, search } from '../../helpers';
 
 @Component({
   tag: 'page-details',

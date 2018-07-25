@@ -1,10 +1,5 @@
 import { Component, Element, Listen, State, Prop } from '@stencil/core';
-
-export interface Segment {
-  min: number,
-  max: number;
-  text: string;
-}
+import { Segment, searchDataPoints } from '../../helpers';
 
 @Component({
   tag: 'page-home',
@@ -42,6 +37,8 @@ export class HomePage {
     this.data = await response.json();
     this.maxValue = Math.log10(this.data[this.data.length - 1].max);
     this.width = this.el.offsetWidth;
+    console.log(this.width);
+    debugger;
 
     this.addHeapMap();
   }
@@ -121,31 +118,4 @@ function mapHeatMap(obj: any, title: any, width: any, data: any) {
       const t = ev.target.closest('my-heatmap').label;
       obj.openDetailPage(t);
     }} />
-}
-
-export function searchDataPoints(data: any, factor: number, text: string) {
-  const results = search(data, text);
-  return generateDataPoint(results, factor);
-}
-
-export function search(data: any, text: string) {
-  text = text.toLowerCase();
-  return data
-    .filter((d) => d.text.toLowerCase().includes(text));
-}
-
-export function generateDataPoint(data: any[], factor: number) {
-  const spacing = 4;
-  const out = [];
-  for (let r of data) {
-    const min = Math.log10(r.min);
-    const max = Math.log10(r.max);
-    const size = (max - min) * factor;
-    const x = (min * factor);
-    const subSteps = size / spacing;
-    for (var i = 0; i < subSteps; i++) {
-      out.push([x + i * spacing, 1, 1]);
-    }
-  }
-  return out;
 }

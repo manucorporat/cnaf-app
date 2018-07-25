@@ -1,5 +1,6 @@
 import { Component, Element, Prop } from '@stencil/core';
 import simpleheat from 'simpleheat';
+import { format } from '../../helpers';
 
 @Component({
   tag: 'my-heatmap',
@@ -79,27 +80,5 @@ export class Heapmap {
       </div>
     )
     return dom;
-  }
-}
-
-export function format(freq: number, addUnit: boolean = true, nuDecimals = 0): string {
-  let result: number
-  if (freq < 1000) {
-    result = freq;
-  } else if (freq < 1000000) {
-    result = freq / 1000.0;
-  } else {
-    result = freq / 1000000.0;
-  }
-  return result.toFixed(nuDecimals) + (addUnit ? unit(freq) : '');
-}
-
-export function unit(freq: number): string {
-  if (freq < 1000) {
-    return 'KHz';
-  } else if (freq < 1000000) {
-    return 'MHz';
-  } else {
-    return 'GHz';
   }
 }

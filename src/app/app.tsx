@@ -31,28 +31,30 @@ export class App {
 
   protected render() {
 
-    return [
-      <ion-router useHash={true}>
-        <ion-route-redirect from="/" to="by_name" />
-        <ion-route url="by_name" component="page-home" />
-        <ion-route url="by_freq" component="page-range" />
-      </ion-router>,
+    return (
+      <ion-app>
+        <ion-router useHash={true}>
+          <ion-route-redirect from="/" to="by_name" />
+          <ion-route url="by_name" component="page-home" />
+          <ion-route url="by_freq" component="page-range" />
+        </ion-router>,
       <ion-split-pane when={true}>
-        <ion-menu>
-          <ion-header>
-            <ion-toolbar color="dark">
-              <ion-title>CNAF app</ion-title>
-            </ion-toolbar>
-          </ion-header>
-          <ion-content>
-            <ion-list>
-              <ion-item href="by_name">Buscar por nombre</ion-item>
-              <ion-item href="by_freq">Buscar por banda</ion-item>
-            </ion-list>
-          </ion-content>
-        </ion-menu>
-        <ion-router-outlet main/>
-      </ion-split-pane>
-    ];
+          <ion-menu>
+            <ion-header>
+              <ion-toolbar color="dark">
+                <ion-title>CNAF app</ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content>
+              <ion-list>
+                <ion-item href="by_name">Buscar por nombre</ion-item>
+                <ion-item href="by_freq">Buscar por banda</ion-item>
+              </ion-list>
+            </ion-content>
+          </ion-menu>
+          <ion-router-outlet main />
+        </ion-split-pane>
+      </ion-app>
+    );
   }
 }
