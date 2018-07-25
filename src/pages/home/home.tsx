@@ -17,7 +17,7 @@ export class HomePage {
 
   @Element() el: HTMLElement;
 
-  @Prop({ connect: 'ion-modal-controller' }) modalCtrl: any;
+  @Prop({ connect: 'ion-modal-controller' }) modalCtrl: HTMLIonModalControllerElement;
 
   @Listen('input')
   onInput(ev) {
@@ -37,8 +37,6 @@ export class HomePage {
     this.data = await response.json();
     this.maxValue = Math.log10(this.data[this.data.length - 1].max);
     this.width = this.el.offsetWidth;
-    console.log(this.width);
-    debugger;
 
     this.addHeapMap();
   }
@@ -77,15 +75,16 @@ export class HomePage {
     return searchDataPoints(this.data, this.width / this.maxValue, text);
   }
 
-  openDetailPage(title: any) {
-    if (title) {
-      this.modalCtrl.create({
+  async openDetailPage(label: any) {
+    if (label) {
+      const modal = await this.modalCtrl.create({
         component: 'page-details',
         componentProps: {
-          label: title,
+          label,
           data: this.data,
         }
-      }).then(m => m.present());
+      });
+      await modal.present();
     }
   }
 
@@ -98,20 +97,23 @@ export class HomePage {
     return [
       <ion-header>
         <ion-toolbar color="dark">
+          <ion-buttons slot="start">
+            <ion-menu-button/>
+          </ion-buttons>
           <ion-title>Busqueda por nombre</ion-title>
         </ion-toolbar>
       </ion-header>,
       <ion-content>
         <ion-searchbar></ion-searchbar>
-        <div>{maps.map((m) => mapHeatMap(this, m.title, m.width, m.data)).reverse()}</div>
+        <div>{maps.map((m) => mapHeatMap(this, m.label, m.width, m.data)).reverse()}</div>
       </ion-content>
     ];
   }
 }
 
-function mapHeatMap(obj: any, title: any, width: any, data: any) {
+function mapHeatMap(obj: any, label: any, width: any, data: any) {
   return <my-heatmap
-    label={title}
+    label={label}
     width={width}
     data={data}
     onClick={function (ev: any) {

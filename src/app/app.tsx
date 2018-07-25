@@ -38,7 +38,8 @@ export class App {
           <ion-route url="by_name" component="page-home" />
           <ion-route url="by_freq" component="page-range" />
         </ion-router>,
-      <ion-split-pane when={true}>
+
+        <ion-split-pane>
           <ion-menu>
             <ion-header>
               <ion-toolbar color="dark">

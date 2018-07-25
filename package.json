@@ -1,28 +1,18 @@
 {
-  "name": "@stencil/starter",
+  "name": "cnaf-app",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil App Starter",
-  "files": [
-    "dist/"
-  ],
+  "description": "CNAF App",
   "scripts": {
     "build": "stencil build",
-    "start": "stencil build --dev --watch --serve",
-    "www": "bs --no-cleanup --directory ./www"
+    "start": "stencil build --dev --watch --serve"
   },
   "dependencies": {
-    "@ionic/core": "4.0.0-alpha.9",
-    "@stencil/core": "0.10.2",
+    "@ionic/core": "4.0.0-beta.0",
+    "@stencil/core": "0.10.9",
     "simpleheat": "^0.4.0"
   },
-  "devDependencies": {
-    "branchsite": "^4.0.3"
-  },
-  "author": "Ionic Team",
+  "author": "Manu Mtz.-Almeida",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
-  },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "https://github.com/manucorporat/cnaf-app"
 }

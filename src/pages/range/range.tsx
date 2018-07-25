@@ -66,6 +66,9 @@ export class RangePage {
     return [
       <ion-header>
         <ion-toolbar color="dark">
+          <ion-buttons slot="start">
+            <ion-menu-button/>
+          </ion-buttons>
           <ion-title>Busqueda por frecuencia</ion-title>
         </ion-toolbar>
       </ion-header>,
